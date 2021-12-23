@@ -15,7 +15,7 @@ export default function Home() {
       <main ref={mainRef} className={styles.main}>
         {
           Array.from(Array(10).keys()).map((e,i)=>{
-            return <h6>This is a Item </h6>
+            return <h6 key={i}>This is a Item </h6>
           })
         }
       </main>
