@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {useRef} from "react"
+import {useRef,useEffect} from "react"
 import LoadScroll from "iath-infinitescroll";
 export default function Home() {
   const mainRef=useRef(0)
+  useEffect(()=>{
+    LoadScroll(mainRef,()=>console.log("hi"))
+  },[])
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +17,7 @@ export default function Home() {
 
       <main ref={mainRef} className={styles.main}>
         {
-          Array.from(Array(10).keys()).map((e,i)=>{
+          Array.from(Array(50).keys()).map((e,i)=>{
             return <h6 key={i}>This is a Item </h6>
           })
         }
