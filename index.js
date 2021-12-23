@@ -2,7 +2,7 @@ function InfiniteScroll(ref,OnScroll=()=>{},distance="100px",root=document.body)
     // 
     let observer = new IntersectionObserver(async(entries, observer)=>{
         if(!entries[0].isIntersecting) return
-        await onScroll();
+        await OnScroll();
         observer.unobserve(entries[0].target)
         observer.observe(ref.current.lastChild)
         

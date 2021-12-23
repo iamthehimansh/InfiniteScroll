@@ -1,6 +1,6 @@
 {
   "name": "iath-infinitescroll",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Scroll Listner",
   "main": "index.js",
   "scripts": {
